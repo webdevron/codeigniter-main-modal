@@ -4,8 +4,8 @@ class Main_m extends CI_Model{
 
 	public function check($table, $arr){
 		$query = $this->db->from($table)
-						  ->where($arr)
-						  ->get();
+				  ->where($arr)
+				  ->get();
 		return $query->num_rows() > 0 ? TRUE : FALSE;
 	}
 
@@ -16,32 +16,32 @@ class Main_m extends CI_Model{
 
 	public function get_row($table, $key) {
 		$query = $this->db->select()
-						  ->from($table)
-						  ->where($key)
-						  ->get();
+				  ->from($table)
+				  ->where($key)
+				  ->get();
 		return $query->row();
 	}
 
 	public function get_many($table, $arr){
 		$query = $this->db->select()
-						  ->from($table)
-						  ->where($arr)
-						  ->get();
+				  ->from($table)
+				  ->where($arr)
+				  ->get();
 		return $query->result();
 	}
 
 	public function get_all($table) {
 		$query = $this->db->select()
-						  ->from($table)
-						  ->get();
+				  ->from($table)
+				  ->get();
 		return $query->result();
 	}
 
 	public function get_like($table, $arr){
 		$query = $this->db->select()
-						  ->from($table)
-						  ->like($arr)
-						  ->get();
+				  ->from($table)
+				  ->like($arr)
+				  ->get();
 		return $query->result();
 	}
 
@@ -63,8 +63,8 @@ class Main_m extends CI_Model{
 
 	public function count_by($table, $arr){
 		$query = $this->db->from($table)
-						  ->where($arr)
-						  ->get();
+				  ->where($arr)
+				  ->get();
 		return $query->num_rows();
 	}
 
